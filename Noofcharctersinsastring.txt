@@ -1,0 +1,129 @@
+package javaproject;
+
+
+
+
+import java.util.*;
+
+
+class StringCharacaterCalculation {
+    public static void main(String[] args) {
+      String s1="gfdgafdgafgaaaa";
+			        //  Integer i1=new Integer(s1);
+			          
+			       char[] abc=  s1.toCharArray();
+			        
+			           
+			                     
+			       Set<Character> larr=new HashSet<>();
+			       
+			       
+			       Map<Character,Integer> mapobj=new HashMap<Character,Integer>();
+			       
+			         List<Character> larrlist=new ArrayList<Character>();
+			         
+			         
+			         
+			         for(int i=0 ;i< abc.length; i++)
+			        	 
+			         {
+			        	 
+			        	 
+			        	 larr.add(abc[i]);
+			        	 
+			        	 
+			        	 
+			         }
+			         
+			         
+			  
+			         
+			         int count=0;
+			         
+			         
+			         
+			     	Iterator ij= larr.iterator();
+			     	
+			     	
+		        
+			     	
+			     	
+			     	
+			     	
+			     	
+			     	
+			     	while(ij.hasNext())
+			        	 
+			         {
+        	 //take out each value
+        	 
+			        	 
+			        
+			        	
+			        	
+			        char ch=	(char) ij.next();
+			        
+			          
+			        for(int u=0; u < abc.length; u++)
+			        {
+			        	
+			        	
+			             if(abc[u]==ch)
+			            	 
+			             {
+			            	 count=count+1;
+			            	 
+			            	 
+			             }
+			             }
+
+			        
+			        
+			        
+			        mapobj.put(ch, count);
+			        count=0;
+			        
+
+			        	
+			        	
+			        }
+			     Set newset=	mapobj.keySet();
+			     
+			     
+			     Iterator mvalues= mapobj.keySet().iterator();
+			     
+			     
+			    while(mvalues.hasNext())
+			    	
+			    {
+			    	
+			    	System.out.println();
+			    	
+			    	
+			    char c=	(char)mvalues.next();
+			    
+			    
+				System.out.print(c);
+			    	
+			    	
+			    	System.out.print(" " +mapobj.get((c)));
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    	
+			    }
+			     
+           
+        
+        
+    }
+}
