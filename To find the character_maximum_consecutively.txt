@@ -1,0 +1,195 @@
+'
+
+package collectionsforIntereview;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Stringcount {
+
+	public static void main(String[] args) {
+		
+	String	str="aaaaaaaabbaacccccccccccccbbbbbbbbbbbbdddddddeeeeebffffff";
+	char[] characterarray=  str.toCharArray();
+	
+	int count=0;
+	
+	Map<Character, Integer> mapobj=new HashMap<Character, Integer>();
+	
+	
+	Set<Character> obj=new HashSet<Character>();
+	
+	
+	int i=0;
+
+	for(i=0;i<characterarray.length;i++)
+		
+	{
+		obj.add(characterarray[i]);
+		
+		
+	}
+	
+
+	
+	Iterator chset= obj.iterator();
+	
+	
+	int k=0;
+	
+	while(chset.hasNext())
+		
+	{
+		
+		char ch=(char) chset.next();
+	
+		
+	 for(int j=0;j<characterarray.length;j++)
+		 
+	 {
+		 
+		 
+		   	if ((characterarray[j]==ch ) && (count==0))
+
+        	{
+        	 
+        		count =1;
+        		k=j;
+        		
+        		
+        	}
+        		
+	
+		
+	
+         if((j!=0))
+         {
+		
+     
+        	 
+		if( ((j -k)==1) && (characterarray[j]==ch )&& (count >0))
+		{
+			
+			count =count +1;
+			
+		
+		      k=j;
+
+		      
+		      
+		}
+		 
+        	         }
+		
+	 }
+	 mapobj.put(ch, count);
+	 
+
+	 
+		count =0;
+		
+		
+		
+		
+	}
+	
+	
+	Iterator charmap= mapobj.keySet().iterator();
+	
+	
+	
+	Object[] num=mapobj.values().toArray();
+	
+	
+	int max=0;
+	
+	
+   for(int t=0;t< num.length; t++)
+	   
+	   
+   {
+	   
+	 if( (int)num[t] > max)
+		 
+	 {
+		 
+	 max=(int) num[t];
+
+	 
+	 }
+	   
+	   
+   } 
+	   
+	   
+   while(charmap.hasNext())
+	{
+	   System.out.println();
+	   
+		char mp=(char)charmap.next();
+		
+		
+		if(mapobj.get(mp)==max)
+		{
+			
+			System.out.print(mp);
+			System.out.println(mapobj.get(mp));
+			
+		}
+		
+		
+
+		
+		
+	}
+	   
+   
+   
+	
+
+	
+	
+	
+	
+	
+	
+	while(charmap.hasNext())
+	{
+		
+		char mp=(char)charmap.next();
+		
+		
+		if(mapobj.get(mp)==max)
+		{
+			
+			System.out.println(mp);
+			
+		}
+		
+		
+
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+				
+	}	
+		// TODO Auto-generated method stub
+	}
+	
+
+
