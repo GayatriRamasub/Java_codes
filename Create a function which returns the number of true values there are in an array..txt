@@ -1,0 +1,98 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.regex.Matcher;
+
+import java.util.regex.Pattern;
+
+
+public class Main
+{
+
+    public static void countnumberofarrays(String[] values)
+
+    {
+
+        int truecount=0;
+
+        int falsecount=0;
+
+
+
+        for(int i=0;i< values.length;i++)
+        {
+
+            if(values[i]=="true")
+            {
+
+                truecount= truecount+1;
+
+
+            }
+
+
+            if(values[i]=="false")
+            {
+
+                falsecount= falsecount+1;
+
+
+
+            }
+
+
+        }
+
+        System.out.println("The true values are "+    truecount);
+
+
+        System.out.println("The false values are "+    falsecount);
+
+
+
+
+    }
+
+    public static void main(String[] args)
+
+    {
+
+
+
+        String[] values= {"true","false" ,"false","true","false"};
+
+
+    
+
+
+
+        values[0]="true";
+
+        values[1]="false";
+
+        values[2]="false";
+
+        values[3]="true";
+
+        values[4]="false";
+
+
+        countnumberofarrays(values);
+
+
+
+
+
+
+         
+
+
+    }
+
+
+
+
+}
+		
+		
+
