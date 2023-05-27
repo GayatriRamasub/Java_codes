@@ -1,0 +1,50 @@
+// Create a function to find the number of words in the string
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class Main
+{
+
+
+
+    public static void countnumberofstringsintheword(String values)
+
+    {
+
+
+        String[] words=values.split(" ");
+
+        System.out.println("The number of words in the strings "+words.length);
+
+
+   }
+
+
+
+    public static void main(String[] args)
+
+    {
+
+
+
+        countnumberofstringsintheword("Just an example here move along");
+
+        countnumberofstringsintheword("This is a test");
+
+        countnumberofstringsintheword("What an easy task, right");
+
+     
+
+
+        }
+
+
+
+}
+		
+		
+
