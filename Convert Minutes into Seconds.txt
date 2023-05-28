@@ -1,0 +1,45 @@
+//Convert Minutes into Seconds
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class Main
+{
+
+    public static long convertoseconds(int values)
+    {
+
+
+        return(values * 60);
+
+    }
+
+   
+
+
+
+   public static void main(String[] args)
+
+    {
+
+
+
+        System.out.println(convertoseconds(5));
+
+        System.out.println(convertoseconds(3));
+
+
+        System.out.println(convertoseconds(2));
+  }
+ 
+
+
+
+    
+}
+		
+		
+
