@@ -1,0 +1,105 @@
+Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+delDel("adelbc") → "abc"
+delDel("adelHello") → "aHello"
+delDel("adedbc") → "adedbc"
+
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+
+
+public class Main 
+
+{
+
+
+
+    public static String delDel(String abc)
+    {
+        String stringtoreturn="";
+
+
+        if(abc.contains("del"))
+        {
+            int a=abc.indexOf("del");
+
+      
+
+
+            StringBuffer obj=new StringBuffer(abc);
+
+            obj.deleteCharAt(a);
+
+
+
+            obj.deleteCharAt(a);
+
+     
+            obj.deleteCharAt(a);
+
+            stringtoreturn=obj.toString();
+
+
+        }
+
+
+        else
+
+        {
+            stringtoreturn=abc;
+
+        }
+
+        return   stringtoreturn;
+
+
+
+
+    }
+
+
+
+    public static void everyNth(String st, int a)
+
+    {
+
+
+        for(int i = 0; i < st.length(); i=i+a)
+
+        {
+
+
+            System.out.print(st.charAt(i));
+
+
+
+        }
+
+    }
+
+    public static void main(String[] args)
+
+    {
+   
+         System.out.println(delDel("adelbc"));
+
+         System.out.println(delDel("adelHello"));
+
+         System.out.println(delDel("adedbc"));
+
+
+
+
+    }
+
+
+}
+		
+		
+
