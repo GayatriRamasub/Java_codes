@@ -1,0 +1,136 @@
+//To find all the palindrome substrings in the given main string. 
+
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+
+
+public class Main {
+
+
+    String valuemain;
+
+
+    public static void palindrome(String a) {
+
+
+        Set<String> obj = new HashSet<>();
+
+
+        char[] arrystring = a.toCharArray();
+
+
+
+        for (int i = 0; i < arrystring.length; i++)
+       {
+
+            for (int j = 0; j < arrystring.length; j++)
+              {
+
+                if ((i != j) && (j>i)  && (j-i==1)) 
+                  {
+                    String charryst = (arrystring[i]) +  String.valueOf(arrystring[j]);
+
+                   
+
+
+                    //System.out.println("The reverse of the string"+charryst);
+
+
+                    if (reverse(charryst).equals(charryst)) 
+                     {
+
+
+                        obj.add(charryst);
+
+
+                     }
+
+
+                    for (int k = 0; k < a.length(); k++) {
+
+                        if (k != (i) && k != (j) && (k > i) && (k> j)) {
+
+
+                            charryst = charryst + arrystring[k] +"";
+
+
+                         //   System.out.println("The reverse of the string"+charryst);
+
+                            if (reverse(charryst).equals(charryst))
+                           {
+
+
+
+                               // System.out.println(charryst);
+
+
+                                obj.add(charryst);
+
+
+                            }
+
+
+                        }
+
+
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+
+        Iterator it=obj.iterator();
+
+
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+      public static void main(String[] args)
+
+    {
+ 
+
+
+           palindrome("poppopo");
+
+    
+
+
+
+    }
+
+
+
+
+}
+		
+	
+
+Output:
+pop
+pp
+oppo
+poppop
+opo
+
